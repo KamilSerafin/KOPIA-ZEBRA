@@ -5,3 +5,5 @@ install:
   - make deps
 script:
   - make test_run
+docker:
+  - make docker_build
