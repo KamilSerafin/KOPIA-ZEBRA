@@ -7,3 +7,5 @@ script:
   - make test_run
 docker:
   - make docker_build
+after_success:
+  - PASSWORD=$DOCKER_PASSWORD make docker_build
