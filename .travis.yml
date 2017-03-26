@@ -10,4 +10,4 @@ script:
 docker:
   - make docker_build
 after_success:
-  - PASSWORD=$DOCKER_PASSWORD make docker_build
+  - PASSWORD=$DOCKER_PASSWORD make docker_push
