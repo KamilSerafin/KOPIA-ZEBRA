@@ -7,7 +7,6 @@ install:
   - make deps
 script:
   - make test_run
-docker:
-  - make docker_build
 after_success:
+  - make docker_build
   - PASSWORD=$DOCKER_PASSWORD make docker_push
