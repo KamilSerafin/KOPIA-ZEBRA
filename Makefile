@@ -8,5 +8,5 @@ lint:
 test_run:
 	PYTHONPATH=. py.test
 
-docker_builder:
+docker_build:
 	docker build -t hello-world-printer.
