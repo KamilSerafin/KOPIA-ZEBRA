@@ -1,21 +1,15 @@
-.PHONY: test deps
 deps:
 	pip install -r requirements.txt; \
 	pip install -r test_requirements.txt
-
-# pip install flake8
 
 lint:
 	flake8 hello_world test
 
 test_run:
-	PYTHONPATH=. py.test --verbose -s
+	PYTHONPATH=. py.test
 
-docker_run: docker_build
-	docker run \
-		-- name hello-world-printer-dev \
-		- p 5000:5000 \
-		- d hello-world-printer
+docker_build:
+	docker build -t hello-world-printer .
 
 USERNAME=zebratester
 TAG=$(USERNAME)/hello-world-printer
