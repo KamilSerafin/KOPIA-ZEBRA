@@ -4,3 +4,4 @@
 4. zaloguj się na https://hub.docker.com zebratester/hasło
 5.
 6.
+7.
