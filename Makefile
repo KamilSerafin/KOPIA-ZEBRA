@@ -1,3 +1,5 @@
+.PHONY: test test_cov
+
 deps:
 	pip install -r requirements.txt; \
 	pip install -r test_requirements.txt
@@ -9,10 +11,10 @@ test_run:
 	PYTHONPATH=. py.test
 
 test_cov:
-    PYTHONPATH=. py.test --verbose -s --cov=.
+	PYTHONPATH=. py.test --verbose -s --cov=.
 
 test_xunit:
-    PYTHONPATH=. py.test -s --cov=. --junit-xml=test_results.xml
+	PYTHONPATH=. py.test -s --cov=. --junit-xml=test_results.xml
 
 docker_build:
 	docker build -t hello-world-printer .
