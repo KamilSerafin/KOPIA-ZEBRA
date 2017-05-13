@@ -10,7 +10,7 @@ invalid_pass = "bleble"
 class WsbPLCheck2(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(10)
 
     def test_1(self):
